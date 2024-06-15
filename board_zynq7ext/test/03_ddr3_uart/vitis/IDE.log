@@ -1,0 +1,226 @@
+15:22:33 DEBUG : Logs will be stored at 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/IDE.log'.
+15:22:51 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\project_vllogic\vllink_zynq7ext\board_zynq7ext\test\03_ddr3_uart\vitis\temp_xsdb_launch_script.tcl
+15:22:51 INFO  : Platform repository initialization has completed.
+15:22:52 INFO  : Registering command handlers for Vitis TCF services
+15:22:54 INFO  : XSCT server has started successfully.
+15:22:54 INFO  : Successfully done setting XSCT server connection channel  
+15:22:54 INFO  : plnx-install-location is set to ''
+15:22:54 INFO  : Successfully done setting workspace for the tool. 
+15:22:54 INFO  : Successfully done query RDI_DATADIR 
+15:23:12 DEBUG : Logs will be stored at 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/IDE.log'.
+15:23:14 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\project_vllogic\vllink_zynq7ext\board_zynq7ext\test\03_ddr3_uart\vitis\temp_xsdb_launch_script.tcl
+15:23:14 INFO  : Platform repository initialization has completed.
+15:23:14 INFO  : Registering command handlers for Vitis TCF services
+15:23:16 INFO  : XSCT server has started successfully.
+15:23:16 INFO  : Successfully done setting XSCT server connection channel  
+15:23:16 INFO  : plnx-install-location is set to ''
+15:23:16 INFO  : Successfully done query RDI_DATADIR 
+15:23:16 INFO  : Successfully done setting workspace for the tool. 
+15:25:47 INFO  : Result from executing command 'getProjects': system_wrapper
+15:25:47 INFO  : Result from executing command 'getPlatforms': 
+15:25:47 WARN  : An unexpected exception occurred in the module 'platform project logging'
+15:25:47 INFO  : Platform 'system_wrapper' is added to custom repositories.
+15:25:52 INFO  : Platform 'system_wrapper' is added to custom repositories.
+15:26:12 INFO  : Result from executing command 'getProjects': system_wrapper
+15:26:12 INFO  : Result from executing command 'getPlatforms': system_wrapper|D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/system_wrapper/export/system_wrapper/system_wrapper.xpfm
+15:26:12 INFO  : Checking for BSP changes to sync application flags for project 'uart'...
+15:26:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:26:59 INFO  : Jtag cable 'Vllogic Vllink FPGA 2310130B6C' is selected.
+15:26:59 INFO  : 'jtag frequency' command is executed.
+15:26:59 INFO  : Context for 'APU' is selected.
+15:27:00 INFO  : System reset is completed.
+15:27:03 INFO  : 'after 3000' command is executed.
+15:27:03 INFO  : Context for 'APU' is selected.
+15:27:03 INFO  : Hardware design and registers information is loaded from 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa'.
+15:27:03 INFO  : 'configparams force-mem-access 1' command is executed.
+15:27:03 INFO  : Context for 'APU' is selected.
+15:27:03 INFO  : Sourcing of 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/uart/_ide/psinit/ps7_init.tcl' is done.
+15:27:03 INFO  : 'ps7_init' command is executed.
+15:27:03 INFO  : 'ps7_post_config' command is executed.
+15:27:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:27:04 INFO  : The application 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/uart/Debug/uart.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:27:04 INFO  : 'configparams force-mem-access 0' command is executed.
+15:27:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/uart/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/uart/Debug/uart.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:27:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:27:04 INFO  : 'con' command is executed.
+15:27:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:27:04 INFO  : Launch script is exported to file 'D:\project_vllogic\vllink_zynq7ext\board_zynq7ext\test\03_ddr3_uart\vitis\uart_system\_ide\scripts\systemdebugger_uart_system_standalone.tcl'
+15:28:22 INFO  : Checking for BSP changes to sync application flags for project 'ddr3'...
+15:28:52 ERROR : Emulation support is not available for Windows OS. 
+15:28:57 INFO  : Disconnected from the channel tcfchan#3.
+15:28:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:28:58 INFO  : Jtag cable 'Vllogic Vllink FPGA 2310130B6C' is selected.
+15:28:58 INFO  : 'jtag frequency' command is executed.
+15:28:58 INFO  : Context for 'APU' is selected.
+15:28:59 INFO  : System reset is completed.
+15:29:02 INFO  : 'after 3000' command is executed.
+15:29:02 INFO  : Context for 'APU' is selected.
+15:29:02 INFO  : Hardware design and registers information is loaded from 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa'.
+15:29:02 INFO  : 'configparams force-mem-access 1' command is executed.
+15:29:02 INFO  : Context for 'APU' is selected.
+15:29:02 INFO  : Sourcing of 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/ddr3/_ide/psinit/ps7_init.tcl' is done.
+15:29:02 INFO  : 'ps7_init' command is executed.
+15:29:02 INFO  : 'ps7_post_config' command is executed.
+15:29:02 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:29:03 INFO  : The application 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/ddr3/Debug/ddr3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:29:03 INFO  : 'configparams force-mem-access 0' command is executed.
+15:29:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/ddr3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/ddr3/Debug/ddr3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:29:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:29:03 INFO  : 'con' command is executed.
+15:29:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:29:03 INFO  : Launch script is exported to file 'D:\project_vllogic\vllink_zynq7ext\board_zynq7ext\test\03_ddr3_uart\vitis\ddr3_system\_ide\scripts\debugger_ddr3-default.tcl'
+15:31:40 INFO  : Disconnected from the channel tcfchan#5.
+15:31:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:31:41 INFO  : Jtag cable 'Vllogic Vllink FPGA 2310130B6C' is selected.
+15:31:41 INFO  : 'jtag frequency' command is executed.
+15:31:41 INFO  : Context for 'APU' is selected.
+15:31:41 INFO  : System reset is completed.
+15:31:44 INFO  : 'after 3000' command is executed.
+15:31:44 INFO  : Context for 'APU' is selected.
+15:31:44 INFO  : Hardware design and registers information is loaded from 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa'.
+15:31:44 INFO  : 'configparams force-mem-access 1' command is executed.
+15:31:44 INFO  : Context for 'APU' is selected.
+15:31:44 INFO  : Sourcing of 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/ddr3/_ide/psinit/ps7_init.tcl' is done.
+15:31:45 INFO  : 'ps7_init' command is executed.
+15:31:45 INFO  : 'ps7_post_config' command is executed.
+15:31:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:31:45 INFO  : The application 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/ddr3/Debug/ddr3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:31:45 INFO  : 'configparams force-mem-access 0' command is executed.
+15:31:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/ddr3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/ddr3/Debug/ddr3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:31:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:31:45 INFO  : 'con' command is executed.
+15:31:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:31:45 INFO  : Launch script is exported to file 'D:\project_vllogic\vllink_zynq7ext\board_zynq7ext\test\03_ddr3_uart\vitis\ddr3_system\_ide\scripts\debugger_ddr3-default.tcl'
+15:35:10 INFO  : Disconnected from the channel tcfchan#6.
+15:35:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:35:11 INFO  : Jtag cable 'Vllogic Vllink FPGA 2310130B6C' is selected.
+15:35:11 INFO  : 'jtag frequency' command is executed.
+15:35:14 INFO  : Context for 'APU' is selected.
+15:35:14 INFO  : System reset is completed.
+15:35:17 INFO  : 'after 3000' command is executed.
+15:35:17 INFO  : Context for 'APU' is selected.
+15:35:17 INFO  : Hardware design and registers information is loaded from 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa'.
+15:35:17 INFO  : 'configparams force-mem-access 1' command is executed.
+15:35:17 INFO  : Context for 'APU' is selected.
+15:35:17 INFO  : Sourcing of 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/ddr3/_ide/psinit/ps7_init.tcl' is done.
+15:35:17 INFO  : 'ps7_init' command is executed.
+15:35:17 INFO  : 'ps7_post_config' command is executed.
+15:35:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:35:18 INFO  : The application 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/ddr3/Debug/ddr3.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:35:18 INFO  : 'configparams force-mem-access 0' command is executed.
+15:35:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/ddr3/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/ddr3/Debug/ddr3.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:35:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:35:18 INFO  : 'con' command is executed.
+15:35:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:35:18 INFO  : Launch script is exported to file 'D:\project_vllogic\vllink_zynq7ext\board_zynq7ext\test\03_ddr3_uart\vitis\ddr3_system\_ide\scripts\debugger_ddr3-default.tcl'
+15:35:51 INFO  : Disconnected from the channel tcfchan#7.
+15:39:36 DEBUG : Logs will be stored at 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/IDE.log'.
+15:39:37 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\project_vllogic\vllink_zynq7ext\board_zynq7ext\test\03_ddr3_uart\vitis\temp_xsdb_launch_script.tcl
+15:39:39 INFO  : XSCT server has started successfully.
+15:39:39 INFO  : plnx-install-location is set to ''
+15:39:39 INFO  : Successfully done setting XSCT server connection channel  
+15:39:39 INFO  : Successfully done setting workspace for the tool. 
+15:39:39 INFO  : Platform repository initialization has completed.
+15:39:39 INFO  : Successfully done query RDI_DATADIR 
+15:39:40 INFO  : Registering command handlers for Vitis TCF services
+15:39:54 INFO  : Result from executing command 'removePlatformRepo': 
+15:39:59 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+15:40:05 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+15:41:16 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+15:41:21 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+15:41:30 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+15:41:42 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+15:41:48 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+15:47:07 DEBUG : Logs will be stored at 'D:/project_vllogic/vllink_zynq7ext/board_zynq7ext/test/03_ddr3_uart/vitis/IDE.log'.
+15:47:08 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\project_vllogic\vllink_zynq7ext\board_zynq7ext\test\03_ddr3_uart\vitis\temp_xsdb_launch_script.tcl
+15:47:10 INFO  : Platform repository initialization has completed.
+15:47:10 INFO  : XSCT server has started successfully.
+15:47:10 INFO  : plnx-install-location is set to ''
+15:47:10 INFO  : Successfully done setting XSCT server connection channel  
+15:47:10 INFO  : Successfully done query RDI_DATADIR 
+15:47:10 INFO  : Successfully done setting workspace for the tool. 
+15:47:11 INFO  : Registering command handlers for Vitis TCF services
+15:47:24 INFO  : Result from executing command 'getProjects': system_wrapper
+15:47:24 INFO  : Result from executing command 'getPlatforms': 
+15:47:24 INFO  : Checking for BSP changes to sync application flags for project 'ddr3'...
+15:47:41 INFO  : Checking for BSP changes to sync application flags for project 'uart'...

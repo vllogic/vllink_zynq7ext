@@ -1,0 +1,8 @@
+15:41:48 **** Clean-only build of configuration Debug for project uart_system ****
+make clean 
+rm -rf ./_sds
+rm -rf package
+rm -f system.bif
+
+15:41:48 Build Finished (took 115ms)
+
